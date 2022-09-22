@@ -16,10 +16,10 @@ module.exports = {
     //TAKE UTILIZABLE INFO
     for (let prog of resp) {
       let programing = {
-        title: prog.title,
+        title: prog.program.name,
         description: prog.description,
-        start: prog.human_start_time,
-        time: prog.start_time,
+        time: prog.human_start_time,
+        start: prog.start_time,
         end: prog.end_time,
         mainImg: prog.custom_info.Graficos.ImagemURL,
         logoImg: prog.custom_info.Graficos.LogoURL
