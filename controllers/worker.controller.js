@@ -1,6 +1,5 @@
 const axios = require('axios')
 const rpcUrl = 'https://epg-api.video.globo.com/programmes/1337?date='
-const moment = require('moment')
 
 module.exports = {
   async getRpcprogramming(req, res) {
@@ -18,7 +17,6 @@ module.exports = {
       let programing = {
         title: prog.program.name,
         description: prog.description,
-        time: prog.human_start_time,
         start: prog.start_time,
         end: prog.end_time,
         mainImg: prog.custom_info.Graficos.ImagemURL,
